@@ -36,8 +36,14 @@ onMounted(() => {
     <div class="main-content">
       <div class="video-section">
         <div class="video-container">
-          <video controls class="promo-video">
-            <source src="/videos/promo.mp4" type="video/mp4">
+          <video 
+            controls 
+            class="promo-video"
+            preload="auto"
+            width="100%"
+            height="auto"
+          >
+            <source src="/video/Ai.mp4" type="video/mp4">
             عذراً، متصفحك لا يدعم تشغيل الفيديو.
           </video>
         </div>
@@ -109,21 +115,20 @@ onMounted(() => {
 }
 
 .video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 8px;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .promo-video {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  background: #000;
 }
 
 .bots-section {
